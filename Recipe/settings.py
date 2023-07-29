@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'chef',
     'raw_material',
     'category',
+    'food',
 ]
 
 MIDDLEWARE = [
