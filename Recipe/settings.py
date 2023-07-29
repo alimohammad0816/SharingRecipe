@@ -37,6 +37,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'chef',
+    'raw_material',
+    'category',
 ]
 
 MIDDLEWARE = [
