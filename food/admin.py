@@ -14,7 +14,7 @@ class FoodCategoryAdmin(admin.TabularInline):
 
 @admin.register(Food)
 class FoodAdmin(admin.ModelAdmin):
-    list_display = ['name', 'recipe', 'ranking', 'raw_materials', 'food_category']
-    list_filter = ['ranking', 'food_category']
+    list_display = ['name', 'recipe', 'ranking']
+    list_filter = ['ranking', ]
 
     inlines = (FoodMaterialAdmin, FoodCategoryAdmin,)
