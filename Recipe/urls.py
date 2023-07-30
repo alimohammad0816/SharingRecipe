@@ -6,4 +6,5 @@ urlpatterns = [
     path('chef/', include("chef.urls")),
     path('raw_material/', include("raw_material.urls")),
     path('category/', include("category.urls")),
+    path('food/', include("food.urls")),
 ]
