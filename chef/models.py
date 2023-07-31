@@ -1,6 +1,7 @@
 from django.db import models
 from django.contrib.auth.models import AbstractUser
 from django.core.validators import RegexValidator
+from food.models import Food
 
 
 class Chef(AbstractUser):
@@ -19,3 +20,10 @@ class Chef(AbstractUser):
             message='password is not good',
         ),
     ])
+
+    food = models.ManyToManyField(Food)
+
+
+class ChefFood(models.Model):
+    chef = models.ForeignKey(Chef, on_delete=models.CASCADE)
+    food = models.ForeignKey(Food, on_delete=models.CASCADE)
