@@ -22,8 +22,3 @@ class Chef(AbstractUser):
     ])
 
     food = models.ManyToManyField(Food)
-
-
-class ChefFood(models.Model):
-    chef = models.ForeignKey(Chef, on_delete=models.CASCADE)
-    food = models.ForeignKey(Food, on_delete=models.CASCADE)
