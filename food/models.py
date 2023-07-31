@@ -13,6 +13,7 @@ class Food(models.Model):
 
     raw_materials = models.ManyToManyField(RawMaterial, related_name='material_of_food')
     foods_category = models.ManyToManyField(Category, related_name='category_of_food')
+    chefs_of_food = models.ManyToManyField('chef.Chef', related_query_name='chefs_of_food')
     picture = models.ImageField(upload_to='media/upload/food/', blank=True, null=True)
     name = models.CharField(max_length=100)
     recipe = models.TextField()
