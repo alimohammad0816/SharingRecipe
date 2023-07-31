@@ -7,6 +7,6 @@ class ChefCreateListAPIView(ListCreateAPIView):
     serializer_class = ChefSerializer
 
 
-class ChefDetails(RetrieveUpdateDestroyAPIView):
+class ChefDetailsAPIView(RetrieveUpdateDestroyAPIView):
     queryset = Chef.objects.all()
     serializer_class = ChefSerializer
