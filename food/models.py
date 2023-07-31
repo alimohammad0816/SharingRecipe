@@ -12,7 +12,7 @@ class Food(models.Model):
         delicious_taste = 5, 'delicious'
 
     raw_materials = models.ManyToManyField(RawMaterial)
-    foods_category = models.ManyToManyField(Category)
+    foods_category = models.ManyToManyField(Category,related_name='category_of_food')
     picture = models.ImageField(upload_to='media/upload/food/', blank=True, null=True)
     name = models.CharField(max_length=100)
     recipe = models.TextField()
