@@ -13,7 +13,7 @@ class Food(models.Model):
 
     raw_materials = models.ManyToManyField(RawMaterial)
     foods_category = models.ManyToManyField(Category)
-    picture = models.ImageField(upload_to='media/upload/food/')
+    picture = models.ImageField(upload_to='media/upload/food/', blank=True, null=True)
     name = models.CharField(max_length=100)
     recipe = models.TextField()
     ranking = models.CharField(choices=RankChoices.choices, null=True, blank=True, max_length=10)
