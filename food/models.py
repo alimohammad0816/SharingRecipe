@@ -21,7 +21,7 @@ class Food(models.Model):
 
 class FoodMaterialMemberShip(models.Model):
     food = models.ForeignKey(Food, on_delete=models.CASCADE)
-    raw_material = models.ForeignKey(RawMaterial, models.CASCADE)
+    raw_material = models.ForeignKey(RawMaterial, on_delete=models.CASCADE)
 
 
 class FoodCategoryMemberShip(models.Model):
