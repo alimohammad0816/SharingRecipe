@@ -6,7 +6,7 @@ from django.contrib.auth.hashers import make_password
 class ChefSerializer(serializers.ModelSerializer):
     class Meta:
         model = Chef
-        fields = ('id', 'first_name', 'last_name', 'email', 'username', 'password', 'food',)
+        fields = ('id', 'first_name', 'last_name', 'email', 'username', 'password',)
 
     def validate_password(self, value: str) -> str:
         """
